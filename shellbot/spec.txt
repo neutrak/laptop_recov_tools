@@ -1,0 +1,8 @@
+This is just a little bot to allow shell access via IRC (so ports don't have to be forwarded).
+
+It is not secure and should not be run in normal operation.  
+
+It is being made so that a stolen laptop, tablet, or phone can run commands of the rightful owner.  
+	As such, it is expected to auto-start on guest account login and be invisible to non-technical users (obviously ps will still show it).  
+
+
