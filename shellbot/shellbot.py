@@ -4,7 +4,7 @@
 #(set to auto-run on guest accounts so I can track stolen computers)
 
 #configuration
-host="daemonic.foonetic.net"
+host="irc.foonetic.net"
 port=6667
 bot_nick="shellbot"
 bot_user="1 2 3 4"
