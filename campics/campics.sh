@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd /home/guest/programs/campics/
+cd /home/guest/programs/laptop_recov_tools/campics/
 
 n=0
 
