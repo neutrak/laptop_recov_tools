@@ -5,4 +5,6 @@ It is not secure and should not be run in normal operation.
 It is being made so that a stolen laptop, tablet, or phone can run commands of the rightful owner.  
 	As such, it is expected to auto-start on guest account login and be invisible to non-technical users (obviously ps will still show it).  
 
+NOTE: ssh access over a VPN connection should be considered preferable to this in all scenarios where that is possible
+
 

@@ -1,0 +1,8 @@
+This is intended to be a simple activity logger that will be used for guest/unprivileged accounts on laptops in order to log what happens in case they get stolen.
+It will depend on a log server being active that it can connect to.  
+
+The intention is to do the following:
+	log the IP address any time the user connects to the internet
+	periodically upload photos from campics
+	save a list of urls that are visited
+
