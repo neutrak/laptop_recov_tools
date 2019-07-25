@@ -4,11 +4,11 @@
 #(set to auto-run on guest accounts so I can track stolen computers)
 
 #configuration
-host="irc.foonetic.net"
+host="irc.freenode.net"
 port=6667
-bot_nick="shellbot"
+bot_nick="neutrak-shellbot"
 bot_user="1 2 3 4"
-autojoin_channels=["#neurotoxin"]
+autojoin_channels=["##neutrak-bots"]
 #autojoin_channels=["#bot-test"]
 #autojoin_channels=[]
 authed_users=['neutrak','neutrak_','neutrak__','neutrak___','neutrak____']
@@ -163,8 +163,9 @@ def server_line(s,line):
 			
 			if(user_authed):
 				handle_botcmd(s,nick,channel,msg)
-			else:
-				socket_writeln('PRIVMSG '+channel+' :user '+nick+' is not authorized to use this bot...')
+			#ignore messages by freenode-connect
+			elif(nick!='freenode-connect'):
+				sock_writeln(s,'PRIVMSG '+channel+' :user '+nick+' is not authorized to use this bot...')
 
 #start the bot
 def run_bot():
