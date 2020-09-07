@@ -2,22 +2,20 @@
 
 cd /home/guest/programs/laptop_recov_tools/campics/
 
-n=0
-
 while [ 1 ]
 do
-	#don't over-write existing files
-	while [ -f "pic_${n}.png" ]
-	do
-		n=$(($n+1))
-	done
+	filename="pic_$(date +"%FT%TZ")"
 	
+	#use mplayer to capture an image from the webcam
 	mplayer -vo png -frames 4 tv://
 	rm 0000000{1,2,3}.png
-	mv "00000004.png" "pic_${n}.png"
-	sleep $((60*15))
+	mv "00000004.png" "$filename.png"
 	
-	n=$(($n+1))
+	#use ffmpeg to capture an image from the webcam
+#	ffmpeg -f video4linux2 -i /dev/video0 -vframes 1 "$filename.jpg"
+	
+	#take another capture every 15 minutes
+	sleep $((60*15))
 done
 
 
