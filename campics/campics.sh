@@ -7,9 +7,9 @@ do
 	filename="pic_$(date +"%FT%TZ")"
 	
 	#use mplayer to capture an image from the webcam
-	mplayer -vo png -frames 4 tv://
-	rm 0000000{1,2,3}.png
-	mv "00000004.png" "$filename.png"
+	mplayer -vo jpg -frames 4 tv://
+	rm 0000000{1,2,3}.jpg
+	mv "00000004.jpg" "$filename.jpg"
 	
 	#use ffmpeg to capture an image from the webcam
 #	ffmpeg -f video4linux2 -i /dev/video0 -vframes 1 "$filename.jpg"
